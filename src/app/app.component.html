@@ -23,17 +23,26 @@
   <div class="box">
     <div>
       <ul class="palavra">
-        <li *ngFor="let l of letras">{{temSelecionada(l) || erros >= 6 ? l : '  '}}</li>
+        <li *ngFor="let l of letras" [class.blinker]="temSelecionada(l)">{{temSelecionada(l) || erros >= 6 ? l : '  '}}</li>
       </ul>
     </div>
 
     <div class="teclado-box">
       <ul class="teclado">
-        <li *ngFor="let l of abc" ><button [disabled]="temSelecionada(l) || erros >= 6" (click)="setLetra(l)">{{l}}</button>
+        <li *ngFor="let l of abc; let i = index" [attr.data-animation-offset]="'1.' + i">
+          <button [disabled]="temSelecionada(l) || this.disabled" (click)="setLetra(l)" [class.move-up]="temSelecionada(l)">
+          {{l}}
+        </button>
         </li>
       </ul>
     </div>
     <p class="dica"><b>Dica:</b> {{dica}}</p>
+
+
+    <div class="botoes">
+      <button (click)="mostrar()">Mostrar</button>
+      <button (click)="next()">proximo</button>
+    </div>
   </div>
 </div>
 
