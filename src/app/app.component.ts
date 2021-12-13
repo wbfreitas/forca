@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
     dica = '';
     index = 0;
     disabled = false;
+    mostrarBody = false;
 
     palavras = [
         {
@@ -48,6 +49,7 @@ export class AppComponent implements OnInit {
         this.palavra = selecionada.palavra;
         this.dica = selecionada.dica;
         this.abc = this.abc2;
+        this.mostrarBody = false;
 
         this.selecionada = ['-'];
         this.erros = 0;
@@ -86,6 +88,7 @@ export class AppComponent implements OnInit {
 
     mostrar() {
         this.selecionada = this.palavra.toUpperCase().split('');
+        this.mostrarBody = true;
     }
 
     next(): void {

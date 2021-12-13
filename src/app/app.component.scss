@@ -1,3 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+::ng-deep{
+  body {
+    //background: url(https://i.gifer.com/origin/58/58bcdf57d5cbae761e796df882903fbd.gif);
+    background-repeat: no-repeat;
+    background-color: #103d76;
+    background-size: 100%;
+    font-family: 'Lato';
+  }
+}
+
 .blink_me {
   animation: blinker 1s linear normal;
 }
@@ -52,6 +64,7 @@ circle {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  z-index: 2;
 }
 
 .forca {
@@ -86,6 +99,7 @@ ul {
     padding: 8px;
     padding-bottom: 1px;
     font-size: 36px;
+    color: #fff;
   }
 }
 
@@ -106,10 +120,11 @@ ul {
     margin-right: 16px;
     margin-bottom: 16px;
     font-size: 36px;
+    cursor: pointer;
 
-    color: #003767;
+    color: #CC231E;
     background: #fff;
-    border: 2px solid #003767;
+    border: 2px solid #CC231E;
 
     &[disabled] {
       opacity: 0.5;
@@ -119,22 +134,38 @@ ul {
       cursor: pointer;
     }
   }
-
-
-
 }
 
 .dica {
   font-size: 20px;
+  color: #fff;
 }
+
 
 .botoes {
   button {
-    background-color: #EC7000;
+    background-color: #CC231E;
     color: #FFFFFF;
     border: none;
     margin-right: 18px;
-    padding: 8px;
+    padding: 10px;
     text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
   }
+}
+
+
+
+.main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  width: 200vmax;
+  height: 200vmax;
+  background: white;
+  transform: translate(-50%, 0) rotate(1deg);
+  border-radius: 100% / 20%;
 }

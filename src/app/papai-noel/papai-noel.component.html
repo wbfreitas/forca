@@ -1,0 +1,18 @@
+<div class="line-top"></div>
+<div class="canvas">
+  <div class="hands blink_me" [class.show]="errors > 2 || mostrar"></div>
+  <div class="arms" [class.show]="errors > 2 || mostrar"></div>
+  <div class="leg" [class.show]="errors > 3 || mostrar"></div>
+  <div class="leg"  [class.show]="errors > 4 || mostrar"></div>
+  <div class="body"  [class.show]="errors > 1 || mostrar"></div>
+  <div class="buttons" [class.show]="errors > 1 || mostrar"></div>
+  <div class="belt" [class.show]="errors > 1 || mostrar"></div>
+  <div class="beard" [class.show]="errors > 0 || mostrar"></div>
+  <div class="head" [class.show]="errors > 0 || mostrar"></div>
+  <div class="eyes" [class.show]="errors > 0 || mostrar"></div>
+  <div class="cheeks" [class.show]="errors > 0 || mostrar"></div>
+  <div class="mustache" [class.show]="errors > 0 || mostrar"></div>
+  <div class="mustache" [class.show]="errors > 0 || mostrar"></div>
+  <div class="hat" [class.show]="errors > 0 || mostrar"></div>
+</div>
+<div class="line-footer"></div>

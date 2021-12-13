@@ -1,24 +1,8 @@
-<div class="main">
-  <div class="forca">
-    <!-- Hangman -->
-    <svg width="500" height="550" viewBox="240 80 1 500">
 
-      <!-- Hanger -->
-      <polyline points="400,500 100,500 150,500 150,100 320,100 320,150"
-        style="fill:none;stroke:black;stroke-width:15" />
-      <!-- body -->
-      <line *ngIf="erros > 1" x1="320" y1="190" x2="320" y2="360" />
-      <!-- left arm -->
-      <line *ngIf="erros > 2" x1="320" y1="260" x2="250" y2="230" />
-      <!-- Right arm -->
-      <line *ngIf="erros > 3" x1="320" y1="260" x2="390" y2="230" />
-      <!-- left leg -->
-      <line *ngIf="erros > 4" x1="320" y1="360" x2="250" y2="450" />
-      <!-- Right leg -->
-      <line *ngIf="erros > 5" x1="320" y1="360" x2="390" y2="450" />
-      <!-- head -->
-      <circle *ngIf="erros > 0" cx="320" cy="190" r="40" fill="white" />
-    </svg>
+<div class="main">
+  <app-luzinhas></app-luzinhas>
+  <div class="forca">
+      <app-papai-noel [errors]="erros" [mostrar]="mostrarBody"></app-papai-noel>
   </div>
   <div class="box">
     <div>
