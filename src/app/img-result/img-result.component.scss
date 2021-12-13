@@ -1,0 +1,25 @@
+ .mainwrap {
+     display: block;
+  font-family: 'Mountains of Christmas', cursive;
+  color: #fff;
+  background: #C0392B;
+  background: repeating-linear-gradient(
+  45deg,
+  #E74C3C,
+  #E74C3C 10px,
+  #C0392B 10px,
+  #C0392B 20px);
+  margin-right: 20px;
+}
+
+.container {
+    display: flex;
+    color: #fff;
+    p {
+        color: #e4be21;
+        font-size: 1.3em;
+        font-weight: 700;
+    }
+}
+
+

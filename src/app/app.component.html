@@ -6,12 +6,16 @@
   </div>
   <div class="box">
     <div>
-      <ul class="palavra">
+      <ul class="palavra" *ngIf="!mostrarBody">
         <li *ngFor="let l of letras" [class.blinker]="temSelecionada(l)">{{temSelecionada(l) || erros >= 6 ? l : '  '}}</li>
       </ul>
     </div>
 
-    <div class="teclado-box">
+    <div *ngIf="mostrarBody">
+      <app-img-result [titulo]="palavraSelecionada?.palavra2" [texto]="palavraSelecionada?.texto" [img]="palavraSelecionada?.img"></app-img-result>
+    </div>
+
+    <div class="teclado-box" *ngIf="!mostrarBody">
       <ul class="teclado">
         <li *ngFor="let l of abc; let i = index" [attr.data-animation-offset]="'1.' + i">
           <button [disabled]="temSelecionada(l) || this.disabled" (click)="setLetra(l)" [class.move-up]="temSelecionada(l)">
@@ -28,5 +32,7 @@
       <button (click)="next()">proximo</button>
     </div>
   </div>
+
+  <div class="footer"></div>
 </div>
 

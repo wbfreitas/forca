@@ -64,7 +64,8 @@ circle {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  z-index: 2;
+  overflow: hidden;
+  max-height: 100vh;
 }
 
 .forca {
@@ -157,15 +158,14 @@ ul {
 
 
 
-.main::before {
-  content: "";
+.footer {
   display: block;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  width: 200vmax;
-  height: 200vmax;
+  position: relative;
   background: white;
-  transform: translate(-50%, 0) rotate(1deg);
   border-radius: 100% / 20%;
+  z-index: -1;
+  height: 500px;
+  width: 120%;
+  top: -50px;
 }
+

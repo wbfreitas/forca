@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { LuzinhasComponent } from './luzinhas/luzinhas.component';
 import { PapaiNoelComponent } from './papai-noel/papai-noel.component';
+import { ImgResultComponent } from './img-result/img-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LuzinhasComponent,
-    PapaiNoelComponent
+    PapaiNoelComponent,
+    ImgResultComponent
   ],
   imports: [
     BrowserModule,

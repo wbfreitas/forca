@@ -21,23 +21,38 @@ export class AppComponent implements OnInit {
     index = 0;
     disabled = false;
     mostrarBody = false;
+    palavraSelecionada = null;
 
     palavras = [
         {
             palavra: 'Bora-vender',
             dica: 'Trending - #Hashtag - Meta',
+            texto: 'texto 1 texto',
+            img: 'https://dl.dropboxusercontent.com/s/5uqou2o4ya9agh1/bell-120px.png',
+            palavra2: 'Bora vender'
         },
         {
-            palavra: 'lead-time',
-            dica: 'Muito Importante'
+            palavra: 'lead time',
+            dica: 'Muito Importante',
+            texto: 'texto 2 texto',
+            img: 'https://dl.dropboxusercontent.com/s/5uqou2o4ya9agh1/bell-120px.png',
+            palavra2: 'lead time',
+
         },
         {
             palavra: 'Contagem-de-BCPS',
-            dica: 'Não podemos esquecer'
+            dica: 'Não podemos esquecer',
+            texto: 'texto 3 texto',
+            img: 'https://dl.dropboxusercontent.com/s/5uqou2o4ya9agh1/bell-120px.png',
+            palavra2: 'Contagem de BCPS'
+
         },
         {
             palavra: 'batatinha-frita',
-            dica: '123'
+            dica: '123',
+            texto: 'texto 4 texto',
+            img: 'https://dl.dropboxusercontent.com/s/5uqou2o4ya9agh1/bell-120px.png',
+            palavra2: 'Contagem de BCPS'
         }
     ]
 
@@ -46,6 +61,7 @@ export class AppComponent implements OnInit {
 
     startGame(index): void {
         const selecionada = this.palavras[index];
+        this.palavraSelecionada = selecionada;
         this.palavra = selecionada.palavra;
         this.dica = selecionada.dica;
         this.abc = this.abc2;
@@ -79,6 +95,7 @@ export class AppComponent implements OnInit {
         if (this.erros >= 6) {
             this.abc = this.fim.split('');
             this.disabled = true;
+            this.mostrarBody = true;
         }
     }
 
@@ -101,6 +118,7 @@ export class AppComponent implements OnInit {
         if ((this.palavra.match(reg) || []).length === this.letras.length) {
             this.abc = this.sucesso.toLocaleUpperCase().split('');
             this.disabled = true;
+            this.mostrarBody = true;
         }
     }
 
